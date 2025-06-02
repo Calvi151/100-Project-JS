@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 2</title></head>
+<body>
+  <h2>Bilangan Genap (1-20)</h2>
+  <ul id="output"></ul>
+  <script>
+    const output = document.getElementById("output");
+    for (let i = 2; i <= 20; i += 2) {
+      const li = document.createElement("li");
+      li.textContent = i;
+      output.appendChild(li);
+    }
+  </script>
+</body>
+</html>

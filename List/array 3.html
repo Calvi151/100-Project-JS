@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program 2 - Tambah Item</title>
+</head>
+<body>
+  <h2>Tambahkan Buah</h2>
+  <input type="text" id="inputFruit" placeholder="Nama buah">
+  <button onclick="addFruit()">Tambah</button>
+  <ul id="fruitList"></ul>
+
+  <script>
+    let fruits = [];
+
+    function addFruit() {
+      const input = document.getElementById("inputFruit");
+      const fruit = input.value;
+      if (fruit) {
+        fruits.push(fruit);
+        updateList();
+        input.value = "";
+      }
+    }
+
+    function updateList() {
+      const list = document.getElementById("fruitList");
+      list.innerHTML = "";
+      fruits.forEach(fruit => {
+        const li = document.createElement("li");
+        li.textContent = fruit;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>

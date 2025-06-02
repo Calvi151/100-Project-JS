@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Keliling Persegi</title></head>
+<body>
+  <h2>Keliling Persegi</h2>
+  <label>Sisi: <input type="number" id="sisi" /></label>
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+  <script>
+    function hitung() {
+      const sisi = parseFloat(document.getElementById('sisi').value);
+      if (isNaN(sisi) || sisi <= 0) {
+        alert("Masukkan nilai sisi yang valid!");
+        return;
+      }
+      const keliling = 4 * sisi;
+      document.getElementById('hasil').textContent = `Keliling persegi adalah ${keliling}`;
+    }
+  </script>
+</body>
+</html>

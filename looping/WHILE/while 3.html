@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>While 3</title></head>
+<body>
+  <h2>Bilangan Ganjil (1-20) - while</h2>
+  <ul id="output"></ul>
+  <script>
+    let i = 1;
+    const output = document.getElementById("output");
+    while (i <= 20) {
+      const li = document.createElement("li");
+      li.textContent = i;
+      output.appendChild(li);
+      i += 2;
+    }
+  </script>
+</body>
+</html>

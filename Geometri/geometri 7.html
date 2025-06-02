@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Keliling Persegi Panjang</title></head>
+<body>
+  <h2>Keliling Persegi Panjang</h2>
+  <label>Panjang: <input type="number" id="panjang" /></label><br>
+  <label>Lebar: <input type="number" id="lebar" /></label><br>
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+  <script>
+    function hitung() {
+      const p = parseFloat(document.getElementById('panjang').value);
+      const l = parseFloat(document.getElementById('lebar').value);
+      if (isNaN(p) || p <= 0 || isNaN(l) || l <= 0) {
+        alert("Masukkan nilai panjang dan lebar yang valid!");
+        return;
+      }
+      const keliling = 2 * (p + l);
+      document.getElementById('hasil').textContent = `Keliling persegi panjang adalah ${keliling}`;
+    }
+  </script>
+</body>
+</html>

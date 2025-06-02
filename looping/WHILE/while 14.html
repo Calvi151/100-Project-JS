@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 14 - while</title></head>
+<body>
+  <h2>Hitung Huruf Vokal (while)</h2>
+  <p id="output"></p>
+  <script>
+    const kalimat = "Saya belajar pemrograman web";
+    let jumlah = 0;
+    let i = 0;
+    while (i < kalimat.length) {
+      if ("aeiouAEIOU".includes(kalimat[i])) {
+        jumlah++;
+      }
+      i++;
+    }
+    document.getElementById("output").textContent = `Jumlah huruf vokal: ${jumlah}`;
+  </script>
+</body>
+</html>

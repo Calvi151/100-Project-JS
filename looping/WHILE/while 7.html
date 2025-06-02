@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>While 7</title></head>
+<body>
+  <h2>Kuadrat 1–10 - while</h2>
+  <ul id="output"></ul>
+  <script>
+    let i = 1;
+    const output = document.getElementById("output");
+    while (i <= 10) {
+      const li = document.createElement("li");
+      li.textContent = `${i}² = ${i * i}`;
+      output.appendChild(li);
+      i++;
+    }
+  </script>
+</body>
+</html

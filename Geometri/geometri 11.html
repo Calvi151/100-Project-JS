@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Keliling Lingkaran</title></head>
+<body>
+  <h2>Keliling Lingkaran</h2>
+  <label>Jari-jari: <input type="number" id="r" /></label><br>
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+  <script>
+    function hitung() {
+      const r = parseFloat(document.getElementById('r').value);
+      if (isNaN(r) || r <= 0) {
+        alert("Masukkan nilai jari-jari yang valid!");
+        return;
+      }
+      const keliling = 2 * Math.PI * r;
+      document.getElementById('hasil').textContent = `Keliling lingkaran adalah ${keliling.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>

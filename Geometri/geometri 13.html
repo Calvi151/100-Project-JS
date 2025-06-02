@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Keliling Jajar Genjang</title></head>
+<body>
+  <h2>Keliling Jajar Genjang</h2>
+  <label>Sisi a: <input type="number" id="a" /></label><br>
+  <label>Sisi b: <input type="number" id="b" /></label><br>
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+  <script>
+    function hitung() {
+      const a = parseFloat(document.getElementById('a').value);
+      const b = parseFloat(document.getElementById('b').value);
+      if (isNaN(a) || a <= 0 || isNaN(b) || b <= 0) {
+        alert("Masukkan nilai sisi yang valid!");
+        return;
+      }
+      const keliling = 2 * (a + b);
+      document.getElementById('hasil').textContent = `Keliling jajar genjang adalah ${keliling}`;
+    }
+  </script>
+</body>
+</html>

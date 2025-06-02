@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 8 - while</title></head>
+<body>
+  <h2>Daftar Nama (while)</h2>
+  <ul id="output"></ul>
+  <script>
+    const names = ["Rizwan", "Sandi", "Rizal", "Cahya", "Syafiq"];
+    const output = document.getElementById("output");
+    let i = 0;
+    while (i < names.length) {
+      const li = document.createElement("li");
+      li.textContent = names[i];
+      output.appendChild(li);
+      i++;
+    }
+  </script>
+</body>
+</html>

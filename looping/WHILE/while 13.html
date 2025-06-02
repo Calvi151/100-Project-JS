@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 13 - while</title></head>
+<body>
+  <h2>Pola Bintang (while)</h2>
+  <pre id="output"></pre>
+  <script>
+    let pola = "";
+    let i = 1;
+    while (i <= 5) {
+      let j = 1;
+      while (j <= i) {
+        pola += "*";
+        j++;
+      }
+      pola += "\n";
+      i++;
+    }
+    document.getElementById("output").textContent = pola;
+  </script>
+</body>
+</html>

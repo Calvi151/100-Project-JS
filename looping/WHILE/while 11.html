@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 11 - while</title></head>
+<body>
+  <h2>Karakter dari Kalimat (while)</h2>
+  <p id="output"></p>
+  <script>
+    const kalimat = "Belajar JavaScript";
+    let hasil = "";
+    let i = 0;
+    while (i < kalimat.length) {
+      hasil += kalimat[i] + " ";
+      i++;
+    }
+    document.getElementById("output").textContent = hasil;
+  </script>
+</body>
+</html>

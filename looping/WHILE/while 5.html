@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>While 5</title></head>
+<body>
+  <h2>Huruf A–J - while</h2>
+  <ul id="output"></ul>
+  <script>
+    let i = 65;
+    const output = document.getElementById("output");
+    while (i <= 74) {
+      const li = document.createElement("li");
+      li.textContent = String.fromCharCode(i);
+      output.appendChild(li);
+      i++;
+    }
+  </script>
+</body>
+</html>

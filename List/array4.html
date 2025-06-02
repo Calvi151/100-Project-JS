@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program 3 - Hapus Terakhir</title>
+</head>
+<body>
+  <h2>Buah</h2>
+  <button onclick="removeLast()">Hapus Terakhir</button>
+  <ul id="fruitList"></ul>
+
+  <script>
+    let fruits = ["Mangga", "Pepaya", "Durian"];
+    const list = document.getElementById("fruitList");
+
+    function displayList() {
+      list.innerHTML = "";
+      fruits.forEach(fruit => {
+        const li = document.createElement("li");
+        li.textContent = fruit;
+        list.appendChild(li);
+      });
+    }
+
+    function removeLast() {
+      fruits.pop();
+      displayList();
+    }
+
+    displayList();
+  </script>
+</body>
+</html>

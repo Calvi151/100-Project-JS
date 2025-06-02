@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 12 - while</title></head>
+<body>
+  <h2>Kelipatan 3 (1–30) (while)</h2>
+  <ul id="output"></ul>
+  <script>
+    const output = document.getElementById("output");
+    let i = 3;
+    while (i <= 30) {
+      const li = document.createElement("li");
+      li.textContent = i;
+      output.appendChild(li);
+      i += 3;
+    }
+  </script>
+</body>
+</html>

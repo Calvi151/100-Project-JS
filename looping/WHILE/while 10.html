@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 10 - while</title></head>
+<body>
+  <h2>Tabel Perkalian 1–5 (while)</h2>
+  <table border="1" cellpadding="5">
+    <tbody id="output"></tbody>
+  </table>
+  <script>
+    const tbody = document.getElementById("output");
+    let i = 1;
+    while (i <= 5) {
+      const tr = document.createElement("tr");
+      let j = 1;
+      while (j <= 5) {
+        const td = document.createElement("td");
+        td.textContent = `${i}x${j}=${i*j}`;
+        tr.appendChild(td);
+        j++;
+      }
+      tbody.appendChild(tr);
+      i++;
+    }
+  </script>
+</body>
+</html>

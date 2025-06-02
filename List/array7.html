@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Program 9 - Hapus Item</title>
+  <title>Program 6 - Balik List</title>
 </head>
 <body>
-  <h2>Hapus Buah</h2>
-  <input type="text" id="hapusInput" placeholder="Nama buah">
-  <button onclick="hapusBuah()">Hapus</button>
+  <h2>List Buah</h2>
+  <button onclick="reverseList()">Balik Urutan</button>
   <ul id="fruitList"></ul>
 
   <script>
     let fruits = ["Apel", "Jeruk", "Mangga", "Durian"];
     const list = document.getElementById("fruitList");
 
-    function tampilkan() {
+    function displayList() {
       list.innerHTML = "";
       fruits.forEach(fruit => {
         const li = document.createElement("li");
@@ -22,13 +21,12 @@
       });
     }
 
-    function hapusBuah() {
-      const input = document.getElementById("hapusInput").value.toLowerCase();
-      fruits = fruits.filter(fruit => fruit.toLowerCase() !== input);
-      tampilkan();
+    function reverseList() {
+      fruits.reverse();
+      displayList();
     }
 
-    tampilkan();
+    displayList();
   </script>
 </body>
 </html>

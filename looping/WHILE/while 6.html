@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>While 6</title></head>
+<body>
+  <h2>Angka 10 ke 1 - while</h2>
+  <ul id="output"></ul>
+  <script>
+    let i = 10;
+    const output = document.getElementById("output");
+    while (i >= 1) {
+      const li = document.createElement("li");
+      li.textContent = i;
+      output.appendChild(li);
+      i--;
+    }
+  </script>
+</body>
+</html>

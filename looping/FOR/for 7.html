@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 7</title></head>
+<body>
+  <h2>Kuadrat Angka 1–10</h2>
+  <ul id="output"></ul>
+  <script>
+    const output = document.getElementById("output");
+    for (let i = 1; i <= 10; i++) {
+      const li = document.createElement("li");
+      li.textContent = `${i}² = ${i * i}`;
+      output.appendChild(li);
+    }
+  </script>
+</body>
+</html>

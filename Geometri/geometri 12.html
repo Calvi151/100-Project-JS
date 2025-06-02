@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Luas Jajar Genjang</title></head>
+<body>
+  <h2>Luas Jajar Genjang</h2>
+  <label>Alas: <input type="number" id="alas" /></label><br>
+  <label>Tinggi: <input type="number" id="tinggi" /></label><br>
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+  <script>
+    function hitung() {
+      const alas = parseFloat(document.getElementById('alas').value);
+      const tinggi = parseFloat(document.getElementById('tinggi').value);
+      if (isNaN(alas) || alas <= 0 || isNaN(tinggi) || tinggi <= 0) {
+        alert("Masukkan nilai alas dan tinggi yang valid!");
+        return;
+      }
+      const luas = alas * tinggi;
+      document.getElementById('hasil').textContent = `Luas jajar genjang adalah ${luas}`;
+    }
+  </script>
+</body>
+</html>

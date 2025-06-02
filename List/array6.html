@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program 5 - Urutkan List</title>
+</head>
+<body>
+  <h2>List Buah</h2>
+  <button onclick="sortList()">Urutkan</button>
+  <ul id="fruitList"></ul>
+
+  <script>
+    let fruits = ["Mangga", "Apel", "Jeruk", "Durian"];
+    const list = document.getElementById("fruitList");
+
+    function displayList() {
+      list.innerHTML = "";
+      fruits.forEach(fruit => {
+        const li = document.createElement("li");
+        li.textContent = fruit;
+        list.appendChild(li);
+      });
+    }
+
+    function sortList() {
+      fruits.sort();
+      displayList();
+    }
+
+    displayList();
+  </script>
+</body>
+</html>

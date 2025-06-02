@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program 8 - Gabung List</title>
+</head>
+<body>
+  <h2>Gabungkan List Buah</h2>
+  <button onclick="gabung()">Gabungkan</button>
+  <ul id="fruitList"></ul>
+
+  <script>
+    const list1 = ["Apel", "Jeruk"];
+    const list2 = ["Durian", "Mangga"];
+    let combined = [];
+
+    function gabung() {
+      combined = list1.concat(list2);
+      const ul = document.getElementById("fruitList");
+      ul.innerHTML = "";
+      combined.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program 4 - Cari Buah</title>
+</head>
+<body>
+  <h2>Cari Buah</h2>
+  <input type="text" id="search" placeholder="Cari buah">
+  <button onclick="findFruit()">Cari</button>
+  <p id="result"></p>
+
+  <script>
+    const fruits = ["Apel", "Jeruk", "Mangga", "Semangka"];
+
+    function findFruit() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const result = document.getElementById("result");
+      const found = fruits.find(fruit => fruit.toLowerCase() === input);
+
+      if (found) {
+        result.textContent = `${found} ditemukan!`;
+      } else {
+        result.textContent = "Buah tidak ditemukan.";
+      }
+    }
+  </script>
+</body>
+</html>

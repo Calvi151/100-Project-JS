@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 8</title></head>
+<body>
+  <h2>Daftar Nama</h2>
+  <ul id="output"></ul>
+  <script>
+    const names = ["Andi", "Budi", "Citra", "Dina", "Eka"];
+    const output = document.getElementById("output");
+    for (let i = 0; i < names.length; i++) {
+      const li = document.createElement("li");
+      li.textContent = names[i];
+      output.appendChild(li);
+    }
+  </script>
+</body>
+</html>

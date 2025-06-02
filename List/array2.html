@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program 1 - Tampilkan List</title>
+</head>
+<body>
+  <h1>Daftar Buah</h1>
+  <ul id="fruitList"></ul>
+
+  <script>
+    const fruits = ["Apel", "Jeruk", "Pisang", "Anggur"];
+    const list = document.getElementById("fruitList");
+
+    fruits.forEach(fruit => {
+      const li = document.createElement("li");
+      li.textContent = fruit;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 5</title></head>
+<body>
+  <h2>Huruf A–J</h2>
+  <ul id="output"></ul>
+  <script>
+    const output = document.getElementById("output");
+    for (let i = 65; i <= 74; i++) {
+      const li = document.createElement("li");
+      li.textContent = String.fromCharCode(i);
+      output.appendChild(li);
+    }
+  </script>
+</body>
+</html>

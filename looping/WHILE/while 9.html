@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 9 - while</title></head>
+<body>
+  <h2>Jumlah Total 1 sampai 10 (while)</h2>
+  <p id="output"></p>
+  <script>
+    let total = 0;
+    let i = 1;
+    while (i <= 10) {
+      total += i;
+      i++;
+    }
+    document.getElementById("output").textContent = `Total: ${total}`;
+  </script>
+</body>
+</html>
